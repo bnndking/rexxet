@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 import SampleReportModal from './SampleReportModal';
+import { useNavigate } from 'react-router-dom'; // 
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
