@@ -3,9 +3,10 @@ import { ArrowRight, Play } from 'lucide-react';
 import SampleReportModal from './SampleReportModal';
 import { useNavigate } from 'react-router-dom'; // 
 
+
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const navigate = useNavigate(); // 👈 create navigate function
   return (
     <>
       <section className="pt-20 pb-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -26,16 +27,17 @@ export default function Hero() {
 
             {/* Sub-headline */}
             <p className="text-xl sm:text-2xl text-gray-600 mb-12 leading-relaxed">
-              See how GPT, Claude, and Gemini mention your brand — and learn how to rank inside their answers.
+              See how GPT, Claude, and Gemini mention your brand — and learn how to rank inside their answers(citations).
+            Rexxet scans how language models read your website, shows where you appear, and tells you exactly how to fix what’s broken.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button
+              
+              onClick={() => navigate('/signup')}
 
-                 onClick={() => navigate('/signup')}
-
-                className="bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 text-lg font-semibold">
+              className="bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 text-lg font-semibold">
                 Start Free Trial
                 <ArrowRight className="h-5 w-5" />
               </button>
@@ -51,13 +53,13 @@ export default function Hero() {
 
             {/* Social Proof */}
             <div className="mt-16 pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500 mb-6">Trusted by growing businesses worldwide</p>
+              <p className="text-sm text-gray-500 mb-6">be the first there</p>
               <div className="flex justify-center items-center space-x-8 opacity-60">
                 {/* Placeholder for company logos */}
-                <div className="h-8 w-24 bg-gray-300 rounded"></div>
-                <div className="h-8 w-24 bg-gray-300 rounded"></div>
-                <div className="h-8 w-24 bg-gray-300 rounded"></div>
-                <div className="h-8 w-24 bg-gray-300 rounded"></div>
+                <div className="h-8 w-24 bg-gray-300 rounded"><p>open ai</p></div>
+                <div className="h-8 w-24 bg-gray-300 rounded"><p>gemini</p></div>
+                <div className="h-8 w-24 bg-gray-300 rounded"><p>claude</p></div>
+                <div className="h-8 w-24 bg-gray-300 rounded"><p>grok</p></div>
               </div>
             </div>
           </div>
