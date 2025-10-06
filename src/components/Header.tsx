@@ -53,7 +53,11 @@ export default function Header() {
               className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
               Login
             </button>
-            <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
+            <button 
+
+               onClick={() => navigate('/signup')}
+
+              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
               Sign Up
             </button>
           </div>
