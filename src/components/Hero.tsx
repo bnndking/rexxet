@@ -30,7 +30,11 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 text-lg font-semibold">
+              <button
+
+                 onClick={() => navigate('/signup')}
+
+                className="bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 text-lg font-semibold">
                 Start Free Trial
                 <ArrowRight className="h-5 w-5" />
               </button>
