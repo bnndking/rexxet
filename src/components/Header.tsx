@@ -47,7 +47,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+            <button 
+               onClick={() => navigate('/signup')}
+
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
               Login
             </button>
             <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
